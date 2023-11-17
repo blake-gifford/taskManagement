@@ -4,6 +4,7 @@ import taskService from './taskService'
 const initialState = {
     tasks: [],
     isLoading: false,
+    isSuccess: false,
     isError: false,
     message: '',
 };
@@ -15,6 +16,7 @@ export const createTask = createAsyncThunk(
     async (taskData, thunkAPI) => {
         try {
             const token = thunkAPI.getState().auth.user.token
+            console.log('this is task data in taskSlice ', taskData)
             return await taskService.createTask(taskData, token)
         } catch (error) {
             const message =

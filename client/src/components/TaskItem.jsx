@@ -1,5 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { deleteTask } from '../features/tasks/taskSlice';
+import './TaskItem.css';
+
 
 function TaskItem({ task }) {
     const dispatch = useDispatch();

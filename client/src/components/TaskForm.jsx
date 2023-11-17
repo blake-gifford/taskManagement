@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createTask } from '../features/tasks/taskSlice';
+import './TaskForm.css';
 
 function TaskForm() {
     const [title, setTitle] = useState('');

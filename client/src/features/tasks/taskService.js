@@ -7,9 +7,10 @@ const createTask = async (taskData, token) => {
     const config = {
         headers: {
             Authorization: `Bearer ${token}`,
-        },
+        }
     }
 
+    console.log('this is task data in the taskService ', taskData)
     const response = await axios.post(API_URL, taskData, config)
 
     return response.data
@@ -25,6 +26,7 @@ const getTasks = async (token) => {
 
     const response = await axios.get(API_URL, config)
 
+    console.log('this is all the tasks ', response.data)
     return response.data
 }
 

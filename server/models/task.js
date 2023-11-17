@@ -9,15 +9,15 @@ const taskSchema = mongoose.Schema(
         },
         title: {
             type: String,
-            required: [true, 'Please add a text value'],
+            required: [true, 'Please add a title value'],
         },
         description: {
             type: String,
-            required: [true, 'Please add a text value'],
+            required: [true, 'Please add a description value'],
         },
         dueDate: {
             type: Date,
-            required: [true, 'Please add a text value'],
+            required: [true, 'Please add a date value'],
         },
     },
     {
