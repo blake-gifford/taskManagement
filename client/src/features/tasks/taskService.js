@@ -2,7 +2,6 @@ import axios from 'axios'
 
 const API_URL = 'http://localhost:5001/api/tasks/'
 
-// Create new task
 const createTask = async (taskData, token) => {
     const config = {
         headers: {
@@ -10,13 +9,11 @@ const createTask = async (taskData, token) => {
         }
     }
 
-    console.log('this is task data in the taskService ', taskData)
     const response = await axios.post(API_URL, taskData, config)
 
     return response.data
 }
 
-// Get user tasks
 const getTasks = async (token) => {
     const config = {
         headers: {
@@ -26,11 +23,9 @@ const getTasks = async (token) => {
 
     const response = await axios.get(API_URL, config)
 
-    console.log('this is all the tasks ', response.data)
     return response.data
 }
 
-// Delete user task
 const deleteTask = async (taskId, token) => {
     const config = {
         headers: {

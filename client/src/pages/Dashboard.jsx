@@ -11,9 +11,10 @@ function Dashboard() {
     const dispatch = useDispatch()
 
     const { user } = useSelector((state) => state.auth)
-    const { tasks = [], isLoading, isError, message } = useSelector(
-        (state) => state.tasks
-    )
+    const { tasks = []
+        , isLoading, isError, message } = useSelector(
+            (state) => state.tasks
+        )
 
     useEffect(() => {
         if (isError) {

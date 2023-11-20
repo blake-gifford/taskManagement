@@ -6,7 +6,7 @@ import './TaskForm.css';
 function TaskForm() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
-    const [dueDate, setDueDate] = useState('');
+    const [dueDate, setDueDate] = useState();
 
 
     const dispatch = useDispatch()
@@ -15,7 +15,6 @@ function TaskForm() {
         e.preventDefault()
 
         if (!title || !description || !dueDate) {
-            // Add some error handling for empty fields
             alert("All fields are required");
             return;
         }
@@ -27,6 +26,7 @@ function TaskForm() {
         }
 
         dispatch(createTask(taskData));
+        window.location.reload();
     }
 
     return (

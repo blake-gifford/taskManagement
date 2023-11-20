@@ -6,7 +6,6 @@ import './TaskItem.css';
 function TaskItem({ task }) {
     const dispatch = useDispatch();
 
-    // Format date to a readable format
     const formatDate = (date) => {
         return new Date(date).toLocaleDateString('en-US', {
             year: 'numeric',

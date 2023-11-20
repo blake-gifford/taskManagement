@@ -10,7 +10,6 @@ const initialState = {
 };
 
 
-// Create new task
 export const createTask = createAsyncThunk(
     'tasks/create',
     async (taskData, thunkAPI) => {
@@ -30,7 +29,6 @@ export const createTask = createAsyncThunk(
     }
 )
 
-// Get user tasks
 export const getTasks = createAsyncThunk(
     'tasks/getAll',
     async (_, thunkAPI) => {
@@ -49,7 +47,6 @@ export const getTasks = createAsyncThunk(
     }
 )
 
-// Delete user task
 export const deleteTask = createAsyncThunk(
     'tasks/delete',
     async (id, thunkAPI) => {
